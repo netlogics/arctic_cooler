@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fan:</strong>
+  <%= @ventilation_log.fan_id %>
+</p>
+
+<p>
+  <strong>Grid:</strong>
+  <%= @ventilation_log.grid_id %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @ventilation_log.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @ventilation_log.end_time %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @ventilation_log.speed %>
+</p>
+
+<%= link_to 'Edit', edit_ventilation_log_path(@ventilation_log) %> |
+<%= link_to 'Back', ventilation_logs_path %>

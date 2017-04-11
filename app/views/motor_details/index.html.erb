@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Motor Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amperage</th>
+      <th>Horsepower</th>
+      <th>Voltage</th>
+      <th>Weight</th>
+      <th>Width</th>
+      <th>Height</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @motor_details.each do |motor_detail| %>
+      <tr>
+        <td><%= motor_detail.amperage %></td>
+        <td><%= motor_detail.horsepower %></td>
+        <td><%= motor_detail.voltage %></td>
+        <td><%= motor_detail.weight %></td>
+        <td><%= motor_detail.width %></td>
+        <td><%= motor_detail.height %></td>
+        <td><%= link_to 'Show', motor_detail %></td>
+        <td><%= link_to 'Edit', edit_motor_detail_path(motor_detail) %></td>
+        <td><%= link_to 'Destroy', motor_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Motor Detail', new_motor_detail_path %>

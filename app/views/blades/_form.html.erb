@@ -1,0 +1,32 @@
+<%= form_for(blade) do |f| %>
+  <% if blade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blade.errors.count, "error") %> prohibited this blade from being saved:</h2>
+
+      <ul>
+      <% blade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :length %>
+    <%= f.text_field :length %>
+  </div>
+
+  <div class="field">
+    <%= f.label :width %>
+    <%= f.text_field :width %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_field :type %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

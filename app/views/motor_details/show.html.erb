@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amperage:</strong>
+  <%= @motor_detail.amperage %>
+</p>
+
+<p>
+  <strong>Horsepower:</strong>
+  <%= @motor_detail.horsepower %>
+</p>
+
+<p>
+  <strong>Voltage:</strong>
+  <%= @motor_detail.voltage %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @motor_detail.weight %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @motor_detail.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @motor_detail.height %>
+</p>
+
+<%= link_to 'Edit', edit_motor_detail_path(@motor_detail) %> |
+<%= link_to 'Back', motor_details_path %>

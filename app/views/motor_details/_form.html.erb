@@ -1,0 +1,47 @@
+<%= form_for(motor_detail) do |f| %>
+  <% if motor_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(motor_detail.errors.count, "error") %> prohibited this motor_detail from being saved:</h2>
+
+      <ul>
+      <% motor_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amperage %>
+    <%= f.text_field :amperage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :horsepower %>
+    <%= f.text_field :horsepower %>
+  </div>
+
+  <div class="field">
+    <%= f.label :voltage %>
+    <%= f.text_field :voltage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weight %>
+    <%= f.text_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :width %>
+    <%= f.text_field :width %>
+  </div>
+
+  <div class="field">
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

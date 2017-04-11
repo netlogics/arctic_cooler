@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @blade.length %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @blade.width %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @blade.type %>
+</p>
+
+<%= link_to 'Edit', edit_blade_path(@blade) %> |
+<%= link_to 'Back', blades_path %>

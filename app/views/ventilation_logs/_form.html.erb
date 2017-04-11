@@ -1,0 +1,42 @@
+<%= form_for(ventilation_log) do |f| %>
+  <% if ventilation_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ventilation_log.errors.count, "error") %> prohibited this ventilation_log from being saved:</h2>
+
+      <ul>
+      <% ventilation_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fan_id %>
+    <%= f.number_field :fan_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :grid_id %>
+    <%= f.number_field :grid_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_time %>
+    <%= f.datetime_select :start_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_time %>
+    <%= f.datetime_select :end_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :speed %>
+    <%= f.text_field :speed %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

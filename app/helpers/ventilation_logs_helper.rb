@@ -1,0 +1,2 @@
+module VentilationLogsHelper
+end

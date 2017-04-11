@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ventilation Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fan</th>
+      <th>Grid</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Speed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ventilation_logs.each do |ventilation_log| %>
+      <tr>
+        <td><%= ventilation_log.fan_id %></td>
+        <td><%= ventilation_log.grid_id %></td>
+        <td><%= ventilation_log.start_time %></td>
+        <td><%= ventilation_log.end_time %></td>
+        <td><%= ventilation_log.speed %></td>
+        <td><%= link_to 'Show', ventilation_log %></td>
+        <td><%= link_to 'Edit', edit_ventilation_log_path(ventilation_log) %></td>
+        <td><%= link_to 'Destroy', ventilation_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ventilation Log', new_ventilation_log_path %>
