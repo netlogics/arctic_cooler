@@ -1,24 +1,33 @@
-# README
+# Arctic Cooler Readme
+## Notes
+ERD diagram (erd.pdf) is in the root dir
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Basic unit tests
 
-Things you may want to cover:
+Fan operations are delegated to motor
 
-* Ruby version
+Dynamic method definitions based on states constant
 
-* System dependencies
+Dynamic predicate method definitions based on states constant
 
-* Configuration
+Scopes for ventilation logs have not been tested
 
-* Database creation
+UI is incomplete
 
-* Database initialization
+## Setup
+Open a terminal
 
-* How to run the test suite
+Clone the repo
+`git clone https://github.com/netlogics/arctic_cooler.git`
 
-* Services (job queues, cache servers, search engines, etc.)
+Change to the repo dir
+`cd [repo-dir]`
 
-* Deployment instructions
+Setup up the database
+`rake db:setup`
 
-* ...
+Start the webserver
+`rails s`
+
+Open a browser and browse
+`localhost:3000`
